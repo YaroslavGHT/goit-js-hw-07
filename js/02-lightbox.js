@@ -27,14 +27,5 @@ function createMarkup(images) {
   
 createMarkup(galleryItems);
 
-list.addEventListener('click', selectImg);
-function selectImg(event){
-    event.preventDefault()
-    if (event.target.tagName === 'IMG') {
-        let lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250, captionsData: 'alt', captionPosition: 'bottom'});
-        lightbox.on('show.simplelightbox', function () {
-        
-        });
-      }
-  }
+const lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250, captionsData: 'alt', captionPosition: 'bottom'});
 

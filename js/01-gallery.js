@@ -37,14 +37,8 @@ function selectImg(event){
       const instance = basicLightbox.create(
         `<img src="${changeImg.dataset.source}" alt="${changeImg.alt}">`
       );
-      document.addEventListener("keydown", event => {
-        if (event.key === 'Escape') {
-          const lightbox = document.querySelector('.basicLightbox--visible');
-          if (lightbox) {
-              lightbox.style.display = "none";
-          }
-          }
-        });
       instance.show();
+     
     }
   }
+
